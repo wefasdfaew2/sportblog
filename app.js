@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var football = require('./routes/football');
 var tennis = require('./routes/tennis');
 var contacts = require('./routes/contacts');
+var admin = require('./routes/admin');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use('/', routes);
 app.use('/football',football);
 app.use('/tennis',tennis);
 app.use('/contacts',contacts);
+app.use('/admin',admin);
 app.use('/users', users);
 
 /// catch 404 and forward to error handler
