@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var football = require('./routes/football');
+var tennis = require('./routes/tennis');
+var contacts = require('./routes/contacts');
 
 var app = express();
 
@@ -23,6 +26,9 @@ app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/football',football);
+app.use('/tennis',tennis);
+app.use('/contacts',contacts);
 app.use('/users', users);
 
 /// catch 404 and forward to error handler
